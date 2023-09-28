@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DLLT Form">
+	<meta name="keywords"    content="Form, Course, IT, Registration">
+	<meta name="author"      content="Dung lai trinh">
+	<title>Register</title>
+	<script src="register.js"></script>
+</head>
+<body>
+	<h1>DLLT Education</h1>
+	<h2>Registration From</h2>
+	<div id="error" style="color: red;"></div>
+	<form id="registerForm" method="post" action="confirm.html" novalidate>
+		<fieldset>
+			<legend> Personal information</legend>
+			<p><label for="firstname"> Enter your first name</label>
+			<input type="text" id="firstname"  name="firstname" pattern="^[A-Z a-z]{1,30}$"><br></p>
+
+			<p><label for="lastname"> Enter your last name</label>
+			<input type="text" id="lastname"  name="lastname" pattern="^[A-Z a-z]{1,30}$"><br></p>
+
+			<p><label for="email"> Enter your Email</label>
+			<input type="text" id="email" name="email" pattern="^[A-Za-z]*@[a-z.A-Z]*$"><br></p>
+
+			<p><label for="phone"> Enter your phone Number</label>
+			<input type="text" id="phone" name="phone" pattern="^((\+84)|0)\d{9}$"><br></p>
+
+			<p><label for="age"> Enter your age</label>
+			<input type="text" id="age" name="age" pattern="^((\d)|(\d\d)|([1][0-4][0-9])|(150))$"><br></p>
+		</fieldset>
+		<br>
+		<fieldset id="radio_occupation">
+			<legend>Seclect your occupation</legend>
+			<p><label for="highschool">Highschool</label>	
+			<input type="radio" id="highschool" name="occupation" value="highschool"><br></p>
+
+			<p><label for="university">University</label>	
+			<input type="radio" id="university" name="occupation" value="university"><br></p>
+
+			<p><label for="working">Working</label>	
+			<input type="radio" id="working" name="occupation" value="working"><br></p>
+
+			<p><label for="retired">Retired</label>	
+			<input type="radio" id="retired" name="occupation" value="retired"><br></p>
+		</fieldset>
+		<br>
+		<fieldset id="checkbox_courses">
+			<legend>Select Courses</legend>
+			<p><label for="logic">Logic Math - 449k</label>
+			<input type="checkbox" id="logic" name="logic" value="&#9989" ></p>
+
+			<p><label for="python">Python Basic - 799k</label>
+			<input type="checkbox" id="python" name="python" value="&#9989" ></p>
+
+			<p><label for="web">Web Basic - 749k</label>
+			<input type="checkbox" id="web" name="web" value="&#9989" ></p>
+
+			<p><label for="game">Game python - 149k</label>
+			<input type="checkbox" id="game" name="game" value="&#9989" ></p>
+
+			<p><label for="data">Data Science Basic - 249k</label>
+			<input type="checkbox" id="data" name="data" value="&#9989" ></p>
+
+			<p><label for="ai">AI Basic - 499k</label>
+			<input type="checkbox" id="ai" name="ai" value="&#9989" ></p>
+		</fieldset>
+		<br>
+		<p>
+			<label for="payment">Payment method</label>
+			<select name="payment" id="payment">
+				<option value="none">Please select</option>
+				<option value="paypal">Paypal</option>
+				<option value="creditcard">Credit Card</option>
+			</select>
+		</p>
+		<br>
+	  	<input type="submit" value="Register Now">
+		<input type="reset" value="Reset">
+	</form> 
+
+</body>
+</html>
